@@ -1,0 +1,132 @@
+.main-body{
+    margin-top: 26px;
+}
+
+.options{
+    text-align: right;
+}
+.options a{
+    padding-left: 10px;
+}
+.barra-navegacao{
+	align-items: center;
+}
+
+.card-cursos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-cursos{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse
+}
+
+#montanha {
+	border: 1px solid black;
+	position: relative;
+	overflow: hidden;
+}
+
+#skier {
+	position: absolute;
+}
+
+#painel {
+	border: 1px solid black;
+	background-color: transparent;
+	position: absolute;
+}
+
+.arvore {
+	background-image: url("../img/obstacles.png");
+	background-position: 0px -31px;
+	width: 28px;
+	height: 32px;
+	position: absolute;
+}
+
+.arvore-grande {
+	background-image: url("../img/obstacles.png");
+	background-position: -95px -66px;
+	width: 33px;
+	height: 64px;
+	position: absolute;
+}
+
+.arvore-fogo {
+	background-image: url("../img/obstacles.png");
+	background-position: -22px -98px;
+	width: 28px;
+	height: 32px;
+	position: absolute;
+}
+
+.cachorro {
+	background-image: url("../img/skier.png");
+	background-position: -22px -207px;
+	width: 22px;
+	height: 15px;
+	position: absolute;
+}
+
+.pedra {
+	background-image: url("../img/obstacles.png");
+	background-position: -29px -50px;
+	width: 24px;
+	height: 14px;
+	position: absolute;
+}
+
+.toco-arvore {
+	background-image: url("../img/obstacles.png");
+	background-position: -252px -51px;
+	width: 16px;
+	height: 11px;
+	position: absolute;
+}
+
+.cogumelo {
+	background-image: url("../img/obstacles.png");
+	background-position: -270px -52px;
+	width: 10px;
+	height: 11px;
+	position: absolute;
+}
+
+.para-frente {
+	background-image: url("../img/skier.png");
+	background-position: -67px -2px;
+	width: 15px;
+	height: 32px;
+}
+
+.para-direita {
+	background-image: url("../img/skier.png");
+	background-position: -26px -6px;
+	width: 22px;
+	height: 28px;
+}
+
+.para-esquerda {
+	background-image: url("../img/skier.png");
+	background-position: -26px -43px;
+	width: 22px;
+	height: 28px;
+}
+
+.perdeu {
+	background-image: url("../img/skier.png");
+	background-position: -241px -2px;
+	width: 29px;
+	height: 32px;
+}
+
+.bateu {
+	background-image: url("../img/skier.png");
+	background-position: -82px -83px;
+	width: 35px;
+	height: 26px;
+}

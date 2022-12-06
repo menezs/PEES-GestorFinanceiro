@@ -1,0 +1,228 @@
+<center>
+	<h1>Skifree<img
+			src="/img/logoSkifree.jpg"
+			alt="Logo do Skifree"
+			width="50"
+			height="70"
+		/></h1>
+	<img src="/img/skifreeFinal.gif" alt="Microsoft SkiFree 1.0" />
+</center>
+<br />
+<div class="container">
+	<div class="row mb-5">
+		<div class="col-md-auto">
+			<div class="bs-component">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a
+							class="nav-link active"
+							data-bs-toggle="tab"
+							href="#historia"
+						>História</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#imagens">Imagens</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#skifree-web">Skifree
+							na Web</a>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							data-bs-toggle="tab"
+							href="#avisos-antivirus"
+						>Avisos Antivírus</a>
+					</li>
+					<a class="btn btn-primary" href="http://ski.ihoc.net" role="button">Site Original</a>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+					<div class="tab-pane fade show active" id="historia">
+						<p>Em 1991 eu estava trabalhando na Microsoft como programador,
+							escrevendo utilitários de programação para uso de outros
+							programadores, como um editor de diálogos usado no desenvolvimento
+							do Word e Excel. Programei principalmente em C para OS/2 (naquela
+							época era um produto da Microsoft, e supostamente a onda do
+							futuro). Decidindo que era hora de aprender a programar Windows (o
+							Windows 3.0 tinha acabado de sair), eu pulei direto e fiz uma
+							versão gráfica do meu antigo jogo de esqui VAX/VMS para terminais
+							VT100.
+							<br />
+							<br />
+							A versão VAX parecia algo assim:
+							<center>
+								<img src="/img/primeiraVersaoSkifree.png" alt="" />
+								<br />
+								Esqui para VAX/VMS
+							</center>
+							<br />
+							<br />
+							Os sinais "^" são árvores, e "//" é o esquiador virando
+							ligeiramente para a direita. O programa foi escrito em Fortran e
+							usou uma combinação de seqüências de escape VT100 e rolagem de
+							texto comum para obter sua animação. Eu fiz vários videogames de
+							terminal de texto como este na faculdade (na Universidade de Puget
+							Sound em Tacoma, Washington) e eles eram bastante populares entre
+							os nerds de computador.
+							<br />
+							<br />
+							O próprio VAX Ski foi inspirado em um jogo da Activision para o
+							console Atari 2600, que eu gostava de jogar na minha juventude.
+							Lembro-me muito pouco do jogo da Activision, mas acho que se
+							parecia muito com o SkiFree.
+							<br />
+							<br />
+							Eu escrevi SkiFree em C no meu computador doméstico, inteiramente
+							para minha própria educação e entretenimento. Um dia, enquanto eu
+							brincava com ele no trabalho, o gerente de programa do Windows
+							Entertainment Pack olhou por cima do meu ombro e imediatamente
+							decidiu que precisava desse jogo. Eu o chamei de WinSki, mas os
+							marketroids da Microsoft odiaram isso e decidiram, por razões
+							inescrutáveis do marketroid, chamá-lo de SkiFree. Depois de alguma
+							resistência simbólica, deixei-os seguir seu caminho. Como o
+							programa não era originalmente um produto da Microsoft, a
+							Microsoft licenciou-o de mim e me pagou uma taxa única trivial
+							(algo como 100 ações da MSFT, sem royalties) por seu uso.
+							<br />
+							<br />
+							SkiFree foi planejado para rodar em um PC 386 com display VGA.
+							Esses computadores não eram muito poderosos, nada como os PCs
+							modernos que podem fazer renderização 3-D em milhões de polígonos
+							texturizados por segundo... Não, naqueles dias não havia nada como
+							um "acelerador de vídeo" -- o VGA era apenas um buffer de pixel
+							burro pendurado no barramento ISA terrivelmente lento. Isso tornou
+							bastante desafiador obter um bom desempenho até mesmo de animações
+							simples orientadas a sprites! O Windows não ajudou em nada
+							introduzindo várias camadas de abstração entre o programa e o
+							hardware de vídeo.... Descobri que valia quase qualquer quantidade
+							de pré-processamento (na CPU 386 "rápida") para reduzir a
+							quantidade de vídeo E/S (sobre o lentoISA), então eu projetei um
+							algoritmo bastante inteligente para combinar objetos/apagamentos
+							sobrepostos e regiões mínimas blt em cada quadro. O resultado foi
+							uma animação sprite transparente perfeitamente livre de oscilações
+							em velocidade razoável, mesmo em computadores muito lentos, como
+							uma máquina 286/EGA antiga que encontrei no laboratório de testes.
+							Hoje em dia, provavelmente seria apenas renderizar os sprites de
+							trás para frente em um buffer de memória e cobrir toda a janela em
+							cada quadro.
+							<br />
+							<br />
+							Em 1993 comecei a trabalhar na versão 2 do SkiFree, que teria
+							física um pouco mais realista, multiplayer, jogo em rede,
+							oponentes de robôs e sons. Consegui fazer cerca de metade dessas
+							coisas (multijogador de tela/teclado dividido, robôs muito
+							grosseiros e som), mas consegui fazer com que a física fosse
+							completamente ferrada até o ponto em que não era mais jogável.
+							Mais ou menos na mesma época eu também perdi o código-fonte
+							original e me distraí com outros projetos, então SkiFree meio que
+							entrou em estase permanente na versão 1.0.
+							<br />
+							<br />
+							Em abril de 2005 eu encontrei o código fonte do SkiFree 1.03 e o
+							compilei, então agora temos uma versão real de 32 bits que deve
+							rodar em qualquer sistema Windows XP, mesmo no novo XP de 64 bits.
+							Também é mais amigável à CPU (usa 1% da CPU em vez de 100%) para
+							que não consuma a bateria do seu notebook. Existem algumas outras
+							mudanças da versão 1.0 - veja se você consegue identificá-las!
+							<br />
+							<br />
+							Em outubro de 2005 corrigi alguns bugs e lancei a versão 1.04.
+							(Algumas das cores do bitmap estavam erradas e a pista de esqui
+							não "envolveu" como em 1.0.)</p>
+					</div>
+					<div class="tab-pane fade" id="imagens">
+						<p>Esta é o Abominável Monstro da Neve:
+							<img
+								src="/img/monstroDaNeve.gif"
+								alt="Abominável Monstro das Neves"
+							/>
+							<br />
+							<br />
+							Monstro da neve jantando:
+							<img
+								src="/img/monstroDaNeveJantando.gif"
+								alt="Abominável Monstro das Neves Jantando"
+							/>
+							<br />
+							<br />
+							É daí que vêm os monstros da neve:
+							<img
+								src="/img/monstroDaNeveCriando.gif"
+								alt="Fazendo um novo Monstro das Neves"
+							/>
+							<br />
+							<br />
+							Aqui está o ícone do Windows:
+							<img src="/img/iconDoWindows.gif" alt="Icone no Windows" />
+							<br />
+							<br />
+							Este é um ícone legal que algum artista gráfico da Microsoft fez:
+							<img src="/img/iconAlguemFez.gif" alt="Icone que Alguém fez" />
+						</p>
+					</div>
+					<div class="tab-pane fade" id="skifree-web">
+						<p>Esta pesquisa no Google realmente retorna muitas páginas sobre
+							SkiFree agora, e não tantos anúncios promocionais "compre um passe
+							de teleférico e ganhe um grátis" mais. A maioria deles são sites
+							de download de warez e listas de "códigos de trapaça", mas existem
+							algumas preciosidades como este clone SkiFree para a calculadora
+							TI 92 (!!). Há um artigo incrivelmente longo sobre Everything2 e
+							uma entrada na Wikipedia (embora algumas das passagens mais
+							filosóficas tenham sido excluídas). Existe até um site SkiFree Fan
+							Fiction !
+							<br />
+							<br />
+							Recebi muitas cartas de fãs ao longo dos anos, mas
+							<a
+								href="http://ski.ihoc.net/fanmail.txt"
+								class="link-danger"
+							>esta</a>
+							é a minha favorita.
+							<br />
+							<br />
+							Eu até recebi uma
+							<a
+								href="http://ski.ihoc.net/ski-call.mp3"
+								class="link-danger"
+							>mensagem de fã</a>
+							na minha secretária eletrônica! (Desculpe pela péssima qualidade
+							do som. Aqui está o meu melhor palpite sobre o que ele está
+							dizendo. Deixe-me saber se eu entendi errado.)
+							<br />
+							<br />
+							Em 10 de fevereiro de 2010, fragmentos dos
+							<a
+								href="http://ski.ihoc.net/sigfried.txt"
+								class="link-danger"
+							>diários perdidos de meu primo SigFried</a>
+							foram descobertos em uma loja de curiosidades em Istambul.
+							SigFried desapareceu em algum momento de 1991 enquanto fazia
+							pesquisa de campo para SkiFree. Ainda não encontramos SigFried,
+							mas agora temos mais algumas pistas sobre o que aconteceu com
+							ele...</p>
+					</div>
+					<div class="tab-pane fade" id="avisos-antivirus">
+						<p>Disseram-me que alguns scanners de malware estão relatando esses
+							arquivos EXE como "infectados" ou "malware". Tenho 99,99999% de
+							certeza de que isso é um falso positivo, mas é claro que não posso
+							provar nada, e as empresas que produzem os scanners de malware não
+							responderam às minhas perguntas.
+							<br />
+							<br />
+							O EXE de 16 bits é o original publicado pela Microsoft em 1991. Os
+							EXEs de 32 bits foram compilados por mim em uma máquina Windows NT
+							razoavelmente segura em 2005 e nunca dispararam nenhum aviso até
+							muito recentemente. Confirmei em backups antigos que os arquivos
+							não foram modificados.
+							<br />
+							<br />
+							Por uma questão de total rigor, instalei uma nova cópia do Windows
+							2000 e Visual Studio 6.0 dos CDs originais da Microsoft em um
+							computador em branco não conectado a nenhuma rede, carreguei o
+							código-fonte do SkiFree por disquete e recompilei.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

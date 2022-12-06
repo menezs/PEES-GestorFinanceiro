@@ -1,0 +1,72 @@
+<div class="container card text-white bg-dark mb-3" style="max-width: 20rem;">
+	<div class="card-header card-cursos">
+		<div>{{curso.nome}}</div>
+		<div>
+			<a href="/curso/update/{{curso.id}}"><i class="fa-solid fa-file-pen"></i></i></a>
+			<a href="http://" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-trash-can"></i></a></div>
+	</div>
+	<div class="card-body">
+		<p class="card-text">
+			<div>
+				Sigla:
+				{{curso.sigla}}
+			</div>
+			<div>
+				Nome:
+				{{curso.nome}}
+			</div>
+			<div>
+				Descrição:
+				{{curso.descricao}}
+			</div>
+			<div>
+				Área:
+				{{curso.areaId}}
+			</div>
+		</p>
+	</div>
+</div>
+
+<!-- Modal -->
+<div
+	class="modal fade"
+	id="staticBackdrop"
+	data-bs-backdrop="static"
+	data-bs-keyboard="false"
+	tabindex="-1"
+	aria-labelledby="staticBackdropLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">Deleção de Curso</h5>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				></button>
+			</div>
+			<div class="modal-body">
+				Você realmente deseja deletar o curso {{curso.nome}}? Essa ação não poderá ser desfeita.
+			</div>
+			<div class="modal-footer">
+				<button
+					type="button"
+					class="btn btn-secondary"
+					data-bs-dismiss="modal"
+				>Cancelar</button>
+				<button id="botao-delecao" type="button" class="btn btn-primary">Sim, tenho certeza!!!!!!</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	const botaoDelecao = document.getElementById("botao-delecao");
+	botaoDelecao.onclick = function(){
+		console.log({{curso}})
+		apagarCurso({{curso.id}});
+	}
+</script>

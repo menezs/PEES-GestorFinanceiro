@@ -1,0 +1,80 @@
+<div class="container bs-docs-section">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h1 id="tables">Cursos</h1>
+            </div>
+
+            <div class="bs-component">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sigla</th>
+                            <th scope="col">Nome</th>
+                            <th class="index-cursos" scope="col"><a href="/curso/create"><button type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></button></i></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each cursos}}
+                            <tr class="table-active">
+                                <th scope="row">{{sigla}}</th>
+                                <td>{{nome}}</td>
+                                <td class="options">
+                                    <a href="/curso/{{id}}"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="/curso/update/{{id}}"><i class="fa-solid fa-file-pen"></i></i></a>
+                                    <a href="/curso/remove/{{id}}" data-bs-toggle="modal" data-bs-target="#modal-curso-{{id}}"><i class="fa-solid fa-trash-can"></i></a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div><!-- /example -->
+        </div>
+    </div>
+</div>
+{{#each cursos}}
+    <!-- Modal -->
+    <div
+        class="modal fade"
+        id="modal-curso-{{id}}"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Deleção de Curso</h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    Você realmente deseja deletar o curso {{nome}}? Essa ação não poderá ser desfeita.
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                    >Cancelar</button>
+                    <button id="delecao-curso-{{id}}" type="button" class="btn btn-primary">Sim, tenho certeza</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+
+{{#each cursos}}
+    <script>
+        const botaoDelecao{{id}} = document.getElementById("delecao-curso-{{id}}");
+        botaoDelecao{{id}}.onclick = function(){
+            apagarCurso({{id}});
+        }
+    </script>
+{{/each}}
